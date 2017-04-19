@@ -1,0 +1,7 @@
+.react-layout-lmr{
+  //@include display-flex;
+  display:flex;
+  >.flex-col{
+    flex: 1;
+  }
+}
