@@ -16,6 +16,8 @@ static propTypes = {
 ```
 ## usage:
 ```jsx
+import ReactLayoutLmr from 'react-layout-lmr';
+
 class App extends React.Component{
   render(){
     return (
