@@ -11,9 +11,9 @@ export default class extends PureComponent{
     return !inProps.width  ? {
         'className':classNames('flex-col',inProps.className)
       }: {
-      style:{
+      style:Object.assign({
         width:inProps.width
-      }
+      },inProps.style)
     };
   }
 
