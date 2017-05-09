@@ -9,8 +9,8 @@ base.entry = {
 base.output = {
   path: config.build.assetsRoot,
   publicPath: config.build.assetsPublicPath,
-  filename: 'react-layout-lmr.js',
-  library: 'ReactLayoutLmr',
+  filename: 'react-layout-horizontal.js',
+  library: 'ReactLayoutHorizontal',
   libraryTarget: 'umd'
 }
 

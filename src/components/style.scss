@@ -1,6 +1,43 @@
-.react-layout-lmr{
-  //@include display-flex;
-  display:flex;
+@mixin justify-content($value: stretch) {
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else {
+    -webkit-box-pack: $value;
+    -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  -moz-justify-content: $value;
+  justify-content: $value;
+}
+
+
+$justify_list:(
+  stretch,
+  center,
+  space-around,
+  flex-start,
+  flex-end,
+  space-between
+);
+
+//https://css-tricks.com/almanac/properties/j/justify-content/
+
+.react-layout-horizontal{
+  display: flex;
+
+  @each $value in $justify_list{
+    &[data-justify=#{$value}]{
+      @include justify-content($value);
+    }
+  }
+
   >.flex-col{
     flex: 1;
   }

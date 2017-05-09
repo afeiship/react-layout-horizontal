@@ -1,5 +1,5 @@
-# react-layout-lmr
-> React component for layout[left/middle/right].
+# react-layout-horizontal
+> React component for layout[left/middle/right] horizontal.
 
 
 ## resource:

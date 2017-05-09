@@ -1,2 +1,6 @@
-import ReactLayoutLmr from 'components/react-layout-lmr';
-export default ReactLayoutLmr;
+import ReactLayoutHorizontal from 'components/react-layout-horizontal';
+import ReactLayoutItem from 'components/react-layout-item';
+export {
+  ReactLayoutHorizontal,
+  ReactLayoutItem
+};
