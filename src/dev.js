@@ -18,7 +18,7 @@ class App extends React.Component{
 
 
         <h1>Justify:space-between</h1>
-        <ReactLayoutHorizontal justify='space-between'>
+        <ReactLayoutHorizontal justify='between'>
           <ReactLayoutItem className="left" style={{width:'100px'}}>left</ReactLayoutItem>
           <ReactLayoutItem className="right"  style={{width:'200px'}}>right</ReactLayoutItem>
         </ReactLayoutHorizontal>

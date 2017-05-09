@@ -5,6 +5,15 @@
 
 ## properties:
 ```javascript
+//export const JUSTIFY = ['start', 'end', 'center', 'around', 'between'];
+
+//react-layout-horizontal:
+static propTypes = {
+  className:PropTypes.string,
+  justify: PropTypes.oneOf(JUSTIFY)
+};
+
+//react-layout-item
 /*===properties start===*/
 static propTypes = {
   className: PropTypes.string,
@@ -37,7 +46,7 @@ class App extends React.Component{
 
 
         <h1>Justify:space-between</h1>
-        <ReactLayoutHorizontal justify='space-between'>
+        <ReactLayoutHorizontal justify='between'>
           <ReactLayoutItem className="left" style={{width:'100px'}}>left</ReactLayoutItem>
           <ReactLayoutItem className="right"  style={{width:'200px'}}>right</ReactLayoutItem>
         </ReactLayoutHorizontal>
@@ -45,6 +54,7 @@ class App extends React.Component{
     );
   }
 }
+
 
 ```
 
