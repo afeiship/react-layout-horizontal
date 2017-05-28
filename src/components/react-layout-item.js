@@ -9,9 +9,6 @@ export default class extends PureComponent {
     className: PropTypes.string,
     flex:PropTypes.bool
   };
-
-  static defaultProps = {
-  };
   /*===properties end===*/
 
   render() {

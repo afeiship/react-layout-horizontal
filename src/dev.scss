@@ -25,4 +25,22 @@ ul,li{list-style: none;}
       outline: none;
     }
   }
+
+  .test13{
+    text-align: center;
+    padding:6px;
+    border: 1px solid #333;
+    background: #fff;
+    em{
+      font-style: normal;
+    }
+
+    >*{
+      margin:0 1px;
+      background: #eee;
+      >*{display: block;}
+      span{font-size:14px;color:#000;}
+      em{font-size:10px;color:#999;}
+    }
+  }
 }

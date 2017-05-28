@@ -10,8 +10,14 @@
 //react-layout-horizontal:
 static propTypes = {
   className:PropTypes.string,
-  justify: PropTypes.oneOf(JUSTIFY)
+  justify: PropTypes.oneOf(JUSTIFY),
+  align: PropTypes.oneOf(ALIGN),
 };
+
+static defaultProps = {
+  justify:'start',
+  align:'center'
+}
 
 //react-layout-item
 /*===properties start===*/
@@ -28,6 +34,7 @@ static defaultProps = {
 
 ## usage:
 ```jsx
+
 import {
   ReactLayoutHorizontal,
   ReactLayoutItem,
@@ -49,6 +56,30 @@ class App extends React.Component{
         <ReactLayoutHorizontal justify='between'>
           <ReactLayoutItem className="left" style={{width:'100px'}}>left</ReactLayoutItem>
           <ReactLayoutItem className="right"  style={{width:'200px'}}>right</ReactLayoutItem>
+        </ReactLayoutHorizontal>
+
+
+
+        <ReactLayoutHorizontal className="test13">
+          <ReactLayoutItem flex>
+            <span>测试1</span>
+            <em>测试1小字</em>
+          </ReactLayoutItem>
+
+          <ReactLayoutItem flex>
+            <span>测试2</span>
+            <em>测试2小字</em>
+          </ReactLayoutItem>
+
+          <ReactLayoutItem flex>
+            <span>测试3</span>
+            <em>测试3小字</em>
+          </ReactLayoutItem>
+
+          <ReactLayoutItem flex>
+            <span>测试4</span>
+            <em>测试4小字</em>
+          </ReactLayoutItem>
         </ReactLayoutHorizontal>
     </div>
     );

@@ -1,20 +1,31 @@
 import './style.scss';
 
-import React,{Children, PropTypes, PureComponent, cloneElement} from 'react';
+import {ALIGN, JUSTIFY} from './const';
+import React,{Children, PureComponent, cloneElement} from 'react';
 
-import {JUSTIFY} from './const';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 export default class extends PureComponent{
   static propTypes = {
     className:PropTypes.string,
-    justify: PropTypes.oneOf(JUSTIFY)
+    justify: PropTypes.oneOf(JUSTIFY),
+    align: PropTypes.oneOf(ALIGN),
   };
 
+  static defaultProps = {
+    justify:'start',
+    align:'center'
+  }
+
   render(){
-    const {children,className,justify,...props} = this.props;
+    const {className,justify,align,...props} = this.props;
     return (
-      <section {...props}  className={classNames('react-layout-horizontal',`row-justify-${justify}`,this.props.className)}>{children}</section>
+      <section {...props}  className={classNames(
+        'react-layout-horizontal',
+        `row-justify-${justify}`,
+        `row-${align}`,
+        className)} />
     );
   }
 }
